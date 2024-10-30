@@ -3,6 +3,39 @@
 =======
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
+## Project Overview
+
+This is a Laravel-based web application designed for managing vehicle reservations for a nickel mining company. The project includes both backend functionality and frontend design, built with Laravel and designed using Figma for an intuitive, responsive UI.
+
+### Features
+
+1. **User Roles**:
+   - **Admin**: Handles vehicle reservations, driver assignments, and approver settings.
+   - **Approver**: Reviews and decides on reservation requests.
+
+2. **Reservation Management**:
+   - Multi-level approval system.
+   - Monitoring vehicle usage, fuel consumption, and maintenance.
+
+3. **Dashboard**:
+   - Graphical representations of vehicle usage data.
+
+4. **Reports**:
+   - Periodic reports exportable to Excel.
+
+5. **Design**:
+   - **UI/UX**: Created with [Figma](https://www.figma.com), ensuring a modern and responsive interface.
+
+6. **Logging**:
+   - Detailed logs for key processes.
+
+## Requirements
+
+- **PHP**: 8.0 or higher
+- **Laravel**: 10.x
+- **Database**: MySQL
+- **Other**: Composer, Node.js
+
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
