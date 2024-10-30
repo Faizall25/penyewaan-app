@@ -24,17 +24,17 @@ This is a Laravel-based web application designed for managing vehicle reservatio
    - Periodic reports exportable to Excel.
 
 5. **Design**:
-   - **UI/UX**: Created with [Figma](https://www.figma.com), ensuring a modern and responsive interface.
+   - **UI/UX**: Created with [Figma]([https://www.figma.com](https://www.figma.com/design/UPqxCSfNTVPqvhAjrCi0gL/Admin-page-penjualan?node-id=126-628&t=KdJC1eveG6jhlS0A-1)), ensuring a modern and responsive interface.
 
 6. **Logging**:
    - Detailed logs for key processes.
 
 ## Requirements
 
-- **PHP**: 8.0 or higher
-- **Laravel**: 10.x
+- **PHP**: 8.3 or higher
+- **Laravel**: 11
 - **Database**: MySQL
-- **Other**: Composer, Node.js
+- **Other**: Composer, Laravel
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
