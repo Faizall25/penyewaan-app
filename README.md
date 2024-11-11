@@ -1,103 +1,175 @@
-<<<<<<< HEAD
-# penyewaan-app
-=======
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Here's a `README.md` template for your Laravel 11 project, including information on usernames, passwords, PHP version, database version, and usage instructions:
 
-## Project Overview
+```markdown
+# Vehicle Reservation System
 
-This is a Laravel-based web application designed for managing vehicle reservations for a nickel mining company. The project includes both backend functionality and frontend design, built with Laravel and designed using Figma for an intuitive, responsive UI.
+This project is a **Vehicle Reservation System** developed using **Laravel 11** and **PHP 8.3**. It allows users to manage vehicle bookings, approvals, and generate reports through an easy-to-use admin dashboard.
 
-### Features
+## Table of Contents
 
-1. **User Roles**:
-   - **Admin**: Handles vehicle reservations, driver assignments, and approver settings.
-   - **Approver**: Reviews and decides on reservation requests.
+1. [Project Details](#project-details)
+2. [System Requirements](#system-requirements)
+3. [Installation](#installation)
+4. [Database Setup](#database-setup)
+5. [Admin Credentials](#admin-credentials)
+6. [Usage Guide](#usage-guide)
 
-2. **Reservation Management**:
-   - Multi-level approval system.
-   - Monitoring vehicle usage, fuel consumption, and maintenance.
+## Project Details
 
-3. **Dashboard**:
-   - Graphical representations of vehicle usage data.
+- **Framework:** Laravel 11
+- **PHP Version:** 8.3
+- **Database:** MySQL 8.0+
+- **Bootstrap Version:** 5.3
+- **Author:** [Your Name or Organization]
 
-4. **Reports**:
-   - Periodic reports exportable to Excel.
+---
 
-5. **Design**:
-   - **UI/UX**: Created with [Figma]([https://www.figma.com](https://www.figma.com/design/UPqxCSfNTVPqvhAjrCi0gL/Admin-page-penjualan?node-id=126-628&t=KdJC1eveG6jhlS0A-1)), ensuring a modern and responsive interface.
+## System Requirements
 
-6. **Logging**:
-   - Detailed logs for key processes.
+Make sure your environment meets the following requirements:
 
-## Requirements
+- PHP 8.3 or higher
+- MySQL 8.0 or higher
+- Composer
+- Node.js and npm (for Laravel Mix)
+- Git
 
-- **PHP**: 8.3 or higher
-- **Laravel**: 11
-- **Database**: MySQL
-- **Other**: Composer, Laravel
+---
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Installation
 
-## About Laravel
+### 1. Clone the Repository
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+```bash
+git clone https://github.com/your-username/vehicle-reservation-system.git
+cd vehicle-reservation-system
+```
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 2. Install Dependencies
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Install the PHP and JavaScript dependencies using Composer and npm:
 
-## Learning Laravel
+```bash
+composer install
+npm install
+npm run dev
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 3. Set Up Environment File
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Copy the `.env.example` to `.env`:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```bash
+cp .env.example .env
+```
 
-## Laravel Sponsors
+Update your `.env` file with the appropriate database and mail credentials:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=your_database_username
+DB_PASSWORD=your_database_password
 
-### Premium Partners
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=your_mailtrap_username
+MAIL_PASSWORD=your_mailtrap_password
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS="no-reply@example.com"
+MAIL_FROM_NAME="Vehicle Reservation System"
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### 4. Database Setup
 
-## Contributing
+Run the following commands to set up your database:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+php artisan migrate --seed
+```
 
-## Code of Conduct
+This will migrate all necessary tables and seed the database with default admin credentials.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## Admin Credentials
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Use the following credentials to log into the admin dashboard after installation:
+
+- **Admin Username:** `admin`
+- **Admin Email:** `admin@vehicle-reservation.com`
+- **Password:** `password`
+
+You can change the default credentials by updating the seeded user information in `database/seeders/DatabaseSeeder.php`.
+
+---
+
+## Usage Guide
+
+### 1. Starting the Development Server
+
+Run the Laravel development server:
+
+```bash
+php artisan serve
+```
+
+By default, the application will be accessible at `http://127.0.0.1:8000`.
+
+### 2. Admin Dashboard
+
+After logging in with the admin credentials, you will have access to the following sections:
+
+- **Dashboard:** Overview of the system status.
+- **Reservations:** View, add, update, or delete vehicle reservations.
+- **Approvals:** Manage approval status of pending reservations.
+- **Reports:** Generate booking reports based on specific criteria.
+
+### 3. File Uploads
+
+Ensure that the `storage` and `public/uploads` directories are writable. You can set the permissions using the following command:
+
+```bash
+chmod -R 775 storage
+chmod -R 775 public/uploads
+```
+
+### 4. Running Tests
+
+To run the unit tests for this project, use:
+
+```bash
+php artisan test
+```
+
+---
+
+## Framework and Tool Versions
+
+- **Laravel Version:** 11.x
+- **PHP Version:** 8.3.x
+- **MySQL Version:** 8.0+
+- **Node.js Version:** 18.x or higher
+- **Composer Version:** 2.x
+
+---
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
->>>>>>> a92e514 (first commit)
+This project is open-source and available under the [MIT License](LICENSE).
+
+```
+
+### Key Points Covered in the README:
+1. **Project Overview** - Introduction to what the system does.
+2. **System Requirements** - Information about the necessary PHP version, MySQL version, etc.
+3. **Installation Steps** - How to set up and install the application, including dependency installation, environment setup, and database configuration.
+4. **Admin Credentials** - The default admin credentials to log in.
+5. **Usage Guide** - Instructions on how to use the admin dashboard, run the server, and handle permissions.
+6. **Framework and Tool Versions** - Detailed versions of Laravel, PHP, and other dependencies.
+7. **License** - Standard open-source licensing information.
+
+This file provides detailed documentation for users and developers to set up and use the Vehicle Reservation System efficiently.
